@@ -6,7 +6,7 @@ var
   servers: seq[string]
   socket: Socket = newSocket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
 
-proc testConne(service: string, timeOut: int): seq[bool] =
+proc testConn(service: string, timeOut: int): seq[bool] =
   if service == ("google"):
     servers = @["8.8.4.4", "8.8.8.8"]
   elif service == ("cloudflare"):
