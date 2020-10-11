@@ -10,3 +10,10 @@ import netTest<br>
 echo("Testing google")<br>
 testConn("google", 2000)<br><br>
 Output: @[true, true] or @[false, false]<br><br>
+<b>testConn proc's</b><br>
+testConn("service", timeout)<br>
+output: @[bool, bool]<br><br>
+testConn("server", port, timeout)<br>
+output: bool<br><br>
+testConn(@["server0", "server1", "server2"], port, timeout)<br>
+output: @[bool, bool, bool]<br><br>

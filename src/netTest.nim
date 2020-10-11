@@ -23,3 +23,24 @@ proc testConn*(service: string, timeOut: int): seq[bool] =
       socket.close()
       socket = newSocket()
   return result
+
+proc testConn*(server: string, port: int, timeOut: int): bool =
+  try:
+    socket.connect(server, Port(port), timeOut)
+    return true
+  except:
+    return false
+  finally:
+    socket.close()
+
+proc testConn*(servers: seq[string], port: int, timeOut: int): seq[bool] =
+  for server in servers:
+    try:
+      socket.connect(server, Port(53), timeOut)
+      result.add(true)
+    except:
+      result.add(false)
+    finally:
+      socket.close()
+      socket = newSocket()
+  return result
