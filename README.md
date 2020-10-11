@@ -8,10 +8,10 @@ service being either google or cloudflare and timeout in miliseconds<br><br>
 <b>Basic usage</b><br>
 import netTest<br>
 echo("Testing google")<br>
-testConn("google", 2000)<br><br>
+testConn(google, port, 2000)<br><br>
 Output: @[true, true] or @[false, false]<br><br>
 <b>testConn proc's</b><br>
-testConn("service", timeout)<br>
+testConn([cloudflare, google], port, timeout)<br>
 output: @[bool, bool]<br><br>
 testConn("server", port, timeout)<br>
 output: bool<br><br>
