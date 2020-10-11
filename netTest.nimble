@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.1"
+version       = "0.1.2"
 author        = "blmvxer"
 description   = "Connection Test for Nim Web Applications"
 license       = "MIT"
