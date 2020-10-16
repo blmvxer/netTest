@@ -37,3 +37,4 @@ proc testConn*(server: string, port: int, timeOut: int): bool =
       return false
     finally:
       socket.close()
+      socket = newSocket()
