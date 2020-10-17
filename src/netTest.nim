@@ -9,6 +9,13 @@ const
   cloudflare* = @["1.1.1.1", "1.0.0.1"]
   google* = @["8.8.4.4", "8.8.8.8"]
 
+type
+  Result = object
+    connects: int
+    disconnects: int
+    conPer: float
+    disPer: float  
+
 export cloudflare, google
 
 proc testConn*(servers: seq[string], port: int, timeOut: int): seq[bool] =

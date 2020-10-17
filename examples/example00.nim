@@ -9,8 +9,8 @@ conn = 0
 dConn = 0
 timer = 0
 
-while timer != 10:
-  if testConn(cloudflare, 53, 250) != @[true, true]:
+while timer != 300:
+  if testConn("1.1.1.1", 53, 250) != true:
     dConn.inc(1)
     sleep(1000)
     timer.inc(1)
